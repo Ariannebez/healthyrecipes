@@ -8,17 +8,21 @@ import { Router } from '@angular/router';
 })
 export class LogInPage {
 
-  username: string |undefined;
-  password: string| undefined;
+  // " ", | undefined
+  //variable without value
+  username: string = "";
+  password: string | undefined;
 
   constructor(private router: Router) {}
 
+  //login function username is set to 'arianne'.
+  //password is set to 'password'.
   login() {
-    // Simulating a simple login check
-    if (this.username === 'user' && this.password === 'password') {
+    // Simple login check
+    if (this.username == 'arianne' && this.password == 'password') {
       console.log('Login successful!');
-      // You can navigate to another page on successful login
-      this.router.navigate(['/home']);
+      
+      this.router.navigate(['/tabs']);
     } else {
       console.log('Login failed. Please check your credentials.');
     }
