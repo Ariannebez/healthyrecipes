@@ -24,3 +24,30 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+
+//All headers have the same colour 
+ion-toolbar {
+      --background: #1c768f;
+      --color: #fbf3f2;
+    }
+
+ion-tab-bar{
+    --background: #1c768f;
+    --color: #fbf3f2;
+}
+
+// colour chnages on hover only, 
+// I want it to change to org when the use is on that page.
+ion-tab-button{
+    color: #fbf3f2;
+    --color-selected: #fa991c !important;
+}
+
+ion-tab-button:hover {
+    --color: #fa991c;
+    --color-selected: #fa991c;
+}
+
+  
