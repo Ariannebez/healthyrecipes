@@ -9,13 +9,21 @@
 -->
 
 <ion-content class="ion-padding">
+
   <!--Logo-->
+  <!--I used a div to center the image-->
+  <div class="imgCon">
   <ion-img
   class="logo" src="assets/logo.png" alt="logo"
   ></ion-img>
-
-  <!--Title of page-->
-  <ion-title>Log In</ion-title>
+</div>
+  
+  <!--I used div because ion-item has a diffrent style and i do not want to title to have a grey background.-->
+  <div class="titleCon">
+    <!--Title of page-->
+  <ion-label class="title">Log In</ion-label>
+  </div>
+  
   <ion-item >
     <ion-label position="floating">Username</ion-label>
     <ion-input [(ngModel)]="username" type="text"></ion-input>
@@ -26,6 +34,6 @@
     <ion-input [(ngModel)]="password" type="password"></ion-input>
   </ion-item>
 
-  <ion-button  expand="full" (click)="login()">Login</ion-button>
+  <ion-button  expand="block" (click)="login()">Login</ion-button>
 </ion-content>
 

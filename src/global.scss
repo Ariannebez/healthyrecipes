@@ -26,10 +26,17 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 
-//body 
+//font-family
 ion-content, ion-card, ion-header, ion-button{
     font-family: 'Times New Roman', Times, serif;
 }
+
+//header
+ion-header{
+    --background: #1c768f;
+    --color: #fbf3f2;
+}
+
 //All headers have the same colour 
 ion-toolbar {
       --background: #1c768f;
@@ -66,9 +73,19 @@ width: 200px;
 // Set a fixed height
 height: 150px;
 
-//center image
-justify-content: center;
-align-items: center;
 }
+
+.imgCon{
+//center image
+margin-bottom: 20px;
+display: flex;
+justify-content: center;
+align-items: center; 
+}
+
+
+
+
+
 
   

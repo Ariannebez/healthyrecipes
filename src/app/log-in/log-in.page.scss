@@ -2,21 +2,18 @@ ion-content {
     --ion-background-color: #fbf3f2; /* Background color of the page */
   
     ion-item {
-      border-radius: 5px;  
+      border-radius: 15px; 
+      margin-top: 10px; 
       margin-bottom: 20px;
       color: #fbf3f2;
     --ion-background-color: #9d9fa6; /*box color*/
     }
-  
-    ion-title {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        // font-family: 'Times New Roman', Times, serif; add this to global scss
-        color: #032539; /* Title color */
-        font-size: 24px; /* Title font size */
-        font-weight: bold; /* Title font weight */
-        text-align: center;/*putting text on center*/
+
+    .title, .titleCon{
+        text-align: center;
+        color: #032539;
+        font-size: 40px;  
     }
 
-   
 }
+
