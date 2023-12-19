@@ -1,3 +1,4 @@
+<!--
 <ion-header>
   <ion-toolbar>
     <ion-title>
@@ -5,9 +6,17 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+-->
 
 <ion-content class="ion-padding">
-  <ion-item>
+  <!--Logo-->
+  <ion-img
+  class="logo" src="assets/logo.png" alt="logo"
+  ></ion-img>
+
+  <!--Title of page-->
+  <ion-title>Log In</ion-title>
+  <ion-item >
     <ion-label position="floating">Username</ion-label>
     <ion-input [(ngModel)]="username" type="text"></ion-input>
   </ion-item>
@@ -17,6 +26,6 @@
     <ion-input [(ngModel)]="password" type="password"></ion-input>
   </ion-item>
 
-  <ion-button expand="full" (click)="login()">Login</ion-button>
+  <ion-button  expand="full" (click)="login()">Login</ion-button>
 </ion-content>
 

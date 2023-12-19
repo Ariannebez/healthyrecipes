@@ -26,7 +26,10 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 
-
+//body 
+ion-content, ion-card, ion-header, ion-button{
+    font-family: 'Times New Roman', Times, serif;
+}
 //All headers have the same colour 
 ion-toolbar {
       --background: #1c768f;
@@ -48,6 +51,24 @@ ion-tab-button{
 ion-tab-button:hover {
     --color: #fa991c;
     --color-selected: #fa991c;
+}
+
+ion-card,ion-card-title, ion-card-subtitle{
+    --background: #1c768f; 
+    color: #fbf3f2;
+}
+
+// edting logo size 
+.logo{
+// Set a fixed width
+width: 200px;
+
+// Set a fixed height
+height: 150px;
+
+//center image
+justify-content: center;
+align-items: center;
 }
 
   
