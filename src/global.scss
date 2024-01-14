@@ -27,9 +27,16 @@
 
 
 //font-family
-ion-content, ion-card, ion-header, ion-button{
-    font-family: 'Times New Roman', Times, serif;
+ion-content, ion-card, ion-header, ion-button, ion-card-title, ion-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
 }
+
+ion-card-subtitle{
+    font-size: large;
+}
+
+
 
 //All headers have the same colour 
 ion-toolbar {
@@ -54,10 +61,11 @@ ion-tab-button:hover {
     --color-selected: #fa991c;
 }
 
-ion-card,ion-card-title, ion-card-subtitle{
+ion-card,ion-card-title, ion-card-subtitle {
     --background: #1c768f; 
     color: #fbf3f2;
 }
+
 
 // edting logo size 
 .logo{
@@ -76,6 +84,7 @@ display: flex;
 justify-content: center;
 align-items: center; 
 }
+
 
 
 

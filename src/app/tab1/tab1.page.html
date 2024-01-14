@@ -23,7 +23,7 @@
     <ion-card (click)="openWarpPage()">
       <img alt="" src="https://sailorbailey.com/wp-content/uploads/2023/04/Cajun-Chicken-Wrap.jpg" />
       <ion-card-header>
-        <ion-card-title>Buffalo Chicken warp</ion-card-title>
+        <ion-card-title>Bufala Chicken warp</ion-card-title>
         <ion-card-subtitle>298 CAL</ion-card-subtitle>
       </ion-card-header>
     
@@ -79,6 +79,7 @@
 
 <!--row 2 ending-->
 
+<div class="ion-padding">Rcih In Protein Recipes</div>
 <!--row 3-->
 <ion-row>
   <!--col 1-->
@@ -112,5 +113,19 @@
 <!--row 3 ending-->
 </ion-grid>
 
-  
+<div class="ion-padding">Your Recipes</div>
+<ion-row>
+  <ion-col sizeMd="6" size="12" *ngFor="let recipe of recipes; let i = index">
+    <ion-card>
+      <img [src]="recipe.image" />
+      <ion-card-header>
+        <ion-card-title>{{ recipe.name }}</ion-card-title>
+        <ion-card-subtitle>{{ recipe.calories }} CAL</ion-card-subtitle>
+      </ion-card-header>
+      <div class="btn-center">
+        <ion-button color="secondary" (click)="deleteRecipe(i)">Delete</ion-button>
+      </div>
+    </ion-card>
+  </ion-col>
+</ion-row>  
 </ion-content>

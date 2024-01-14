@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab4.page.scss'],
 })
 export class Tab4Page implements OnInit {
+  public user = {
+    name: 'Username',
+    email: 'user@example.com',
+    lastLogin: 'Date',
+    accountCreated: 'Date',
+  };
 
   constructor() { }
 

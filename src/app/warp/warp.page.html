@@ -3,26 +3,70 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
     </ion-buttons>
-    <ion-title>Buffalo Chicken warp</ion-title>
+    <ion-title>Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Buffalo Chicken warp</ion-title>
+      <ion-title size="large">Details</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-card>
     <img alt="buffalo chicken warp" src="https://sailorbailey.com/wp-content/uploads/2023/04/Cajun-Chicken-Wrap.jpg" />
     <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>Bufala Chicken warp</ion-card-title>
+      <ion-card-subtitle>298 CAL</ion-card-subtitle>
     </ion-card-header>
-  
+
+    <ion-card-header>
+      <ion-card-title>INGREDIENTS NEEDED</ion-card-title>
+    </ion-card-header>    
+    
     <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
+      <ion-list>
+        <ion-item>
+          <ion-label>Chicken</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Warps</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Lettuce</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Bufala Chese</ion-label>
+        </ion-item>
+
+        <div class="centerBTN">
+          <ion-button color="secondary" (click)="addAllIngredientsToShoppingList()">
+            Add to List
+          </ion-button>
+        </div>
+        
+      </ion-list>
+      
+    </ion-card-content>
+  
+    <ion-card-header>
+      <ion-card-title>DES</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="text">
+      This meal is can be made in less than 20 minutes and is perfect for busy nights. It can be done in less than 10 minutes if you have chicken already cooked up!
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-title>How to Cook</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="text">
+      Cook the chicken - Season the raw chicken, then place in a heated skillet with olive oil. Cook until done. Remove and toss it with buffalo sauce.
+      Prepare toppings - Chop lettuce, tomatoes, and avocados.
+      Assemble wraps - Lay a tortilla flat and add the chicken mixture and the toppings of your choice. Drizzle with ranch or blue cheese dressing.
+      Roll carefully - Fold in the sides of the tortilla and tuck as you roll. Secure each side of the buffalo chicken wrap with a toothpick and cut in half.
     </ion-card-content>
   </ion-card>
 

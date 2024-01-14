@@ -4,24 +4,40 @@ import { Injectable, EventEmitter } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedDataService {
-  private recipeData: {
-    image: string | undefined;
-    name: string;
-    description: string;
-    calories: number;
-  } | undefined;
+  private recipes: any[] = [];
+  onDataAdded = new EventEmitter<void>();
 
-  onDataAdded = new EventEmitter<void>(); // Event emitter
-
-  constructor() { }
-
-  public setRecipeData(data: { image: string | undefined; name: string; description: string; calories: number; }) {
-    this.recipeData = data;
-    this.onDataAdded.emit(); // Emit event when new data is set
+  constructor() {
+    this.loadRecipes();
   }
 
-  public getRecipeData() {
-    return this.recipeData;
+  private saveRecipes() {
+    localStorage.setItem('recipes', JSON.stringify(this.recipes));
+  }
+
+  private loadRecipes() {
+    const storedRecipes = localStorage.getItem('recipes');
+    if (storedRecipes) {
+      this.recipes = JSON.parse(storedRecipes);
+    }
+  }
+
+  public addRecipeData(data: any) {
+    this.recipes.push(data);
+    this.saveRecipes();
+    this.onDataAdded.emit();
+  }
+
+  public deleteRecipe(index: number) {
+    this.recipes.splice(index, 1);
+    this.saveRecipes();
+    this.onDataAdded.emit();
+  }
+
+  public getRecipes() {
+    return this.recipes;
   }
 }
+
+
 

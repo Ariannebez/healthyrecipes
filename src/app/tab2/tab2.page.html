@@ -5,24 +5,33 @@
 </ion-header>
 
 <ion-content>
-  <ion-button expand="full" (click)="takePicture()">Take Picture</ion-button>
-  <ion-img [src]="recipeImage"></ion-img>
-  
+  <div class="title">
+    <ion-title>Add Your Own Recipe !</ion-title>
+  </div>
 
+  <div class="divp">
+    <ion-button  expand="block" color="secondary" (click)="takePicture()"><ion-icon name="camera"></ion-icon></ion-button>
+    <ion-img [src]="recipeImage"></ion-img>
+  </div>
+  
+  
   <ion-item>
     <ion-label position="floating">Recipe Name:</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="recipeName"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Description:</ion-label>
-    <ion-textarea></ion-textarea>
+    <ion-textarea [(ngModel)]="description"></ion-textarea>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Cal amount:</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="calories"></ion-input>
   </ion-item>
-
-  <ion-button expand="full">Add</ion-button>
-</ion-content> 
+  
+  <div class="divp">
+    <ion-button color="secondary" expand="block" (click)="onAddRecipe()">Add To Recipes</ion-button>
+  </div>
+  
+</ion-content>
 
 

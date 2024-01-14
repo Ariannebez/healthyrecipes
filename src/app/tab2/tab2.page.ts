@@ -37,8 +37,9 @@ export class Tab2Page implements OnInit {
 
   private saveRecipeData(name: string, description: string, calories: number) {
     // Call the shared service to save the data
-    this.sharedDataService.setRecipeData({ image: this.recipeImage, name, description, calories });
+    this.sharedDataService.addRecipeData({ image: this.recipeImage, name, description, calories });
   }
 }
+
 
 
