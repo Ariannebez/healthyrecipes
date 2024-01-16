@@ -103,7 +103,7 @@
 <div class="ion-padding">Your Recipes</div>
 <ion-row>
   <ion-col sizeMd="6" size="12" *ngFor="let recipe of recipes; let i = index">
-    <ion-card>
+    <ion-card (click)="openRecipeDetails(recipe)">
       <img [src]="recipe.image" />
       <ion-card-header>
         <ion-card-title>{{ recipe.name }}</ion-card-title>

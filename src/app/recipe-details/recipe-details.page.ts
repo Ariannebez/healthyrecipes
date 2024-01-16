@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedDataService } from '../shared-data.service';
 
 @Component({
   selector: 'app-recipe-details',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-details.page.scss'],
 })
 export class RecipeDetailsPage implements OnInit {
-
-  constructor() { }
+  recipe: any;
+  
+  constructor(private sharedDataService: SharedDataService) {} // or RecipeService
 
   ngOnInit() {
+    this.recipe = this.sharedDataService.getCurrentRecipe(); // Retrieve the current recipe
   }
 
 }

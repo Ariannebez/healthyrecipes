@@ -37,6 +37,17 @@ export class SharedDataService {
   public getRecipes() {
     return this.recipes;
   }
+
+  private currentRecipe: any;
+
+  setCurrentRecipe(recipe: any) {
+    this.currentRecipe = recipe;
+  }
+
+  getCurrentRecipe() {
+    return this.currentRecipe;
+  }
+  
 }
 
 

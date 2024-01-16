@@ -45,6 +45,10 @@ export class Tab1Page implements OnInit, OnDestroy {
     this.router.navigate(['/turkey-burger']);
   }
 
+  openRecipeDetails(recipe: any) {
+    this.sharedDataService.setCurrentRecipe(recipe);
+    this.router.navigate(['/recipe-details']);
+  }
  
 }
 
