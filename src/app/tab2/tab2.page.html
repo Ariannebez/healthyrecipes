@@ -27,6 +27,22 @@
     <ion-label position="floating">Cal amount:</ion-label>
     <ion-input type="number" [(ngModel)]="calories"></ion-input>
   </ion-item>
+
+  <!--add ingredients-->
+  <ion-list>
+    <ion-list-header>
+      Ingredients
+    </ion-list-header>
+    <ion-item *ngFor="let ingredient of ingredients; let i = index">
+      <ion-label position="floating">Ingredient {{i + 1}}</ion-label>
+      <ion-input type="text" [(ngModel)]="ingredient.name"></ion-input>
+      <ion-button fill="clear" (click)="removeIngredient(i)">
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" color="secondary" (click)="addIngredient()">Add Ingredient</ion-button>
+  <!--end of ingredients-->
   
   <div class="divp">
     <ion-button color="secondary" expand="block" (click)="onAddRecipe()">Add To Recipes</ion-button>

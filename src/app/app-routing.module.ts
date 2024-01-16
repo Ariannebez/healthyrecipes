@@ -22,6 +22,14 @@ const routes: Routes = [
     path: 'warp',
     loadChildren: () => import('./warp/warp.module').then( m => m.WarpPageModule)
   },
+  {
+    path: 'turkey-burger',
+    loadChildren: () => import('./turkey-burger/turkey-burger.module').then( m => m.TurkeyBurgerPageModule)
+  },
+  {
+    path: 'recipe-details',
+    loadChildren: () => import('./recipe-details/recipe-details.module').then( m => m.RecipeDetailsPageModule)
+  },
   
   
 ];

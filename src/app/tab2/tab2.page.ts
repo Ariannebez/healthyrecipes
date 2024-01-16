@@ -39,6 +39,27 @@ export class Tab2Page implements OnInit {
     // Call the shared service to save the data
     this.sharedDataService.addRecipeData({ image: this.recipeImage, name, description, calories });
   }
+
+   //Adding  ingredients
+  // Initialize the ingredients array
+  ingredients: { name: string }[] = [{ name: '' }];
+
+  
+
+  // Method to add a new ingredient field
+  addIngredient() {
+    this.ingredients.push({ name: '' });
+  }
+
+  // Method to remove an ingredient field
+  removeIngredient(index: number) {
+    if (this.ingredients.length > 1) {
+      this.ingredients.splice(index, 1);
+    } else {
+      // Optionally reset the first item instead of removing it
+      this.ingredients[0].name = '';
+    }
+  }
 }
 
 

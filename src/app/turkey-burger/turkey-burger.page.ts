@@ -3,11 +3,12 @@ import { Router } from '@angular/router';  // Import Router
 import { ShoppingListService } from '../shopping-list.service';
 
 @Component({
-  selector: 'app-warp',
-  templateUrl: './warp.page.html',
-  styleUrls: ['./warp.page.scss'],
+  selector: 'app-turkey-burger',
+  templateUrl: './turkey-burger.page.html',
+  styleUrls: ['./turkey-burger.page.scss'],
 })
-export class WarpPage implements OnInit {
+export class TurkeyBurgerPage implements OnInit {
+
   ingredients: string[] = [];  // Your ingredients array
 
   // Inject both ShoppingListService and Router in the constructor
@@ -17,7 +18,7 @@ export class WarpPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.ingredients = ['Chicken', 'Warps', 'Lettuce', 'Bufala Chese'];
+    this.ingredients = ['testing', 'Warping', 'Lettucessss', 'Bufala Chese'];
   }
 
   addAllIngredientsToShoppingList() {
@@ -29,6 +30,4 @@ export class WarpPage implements OnInit {
     this.router.navigateByUrl('/tabs/tab3');
   }
 
-  
 }
-

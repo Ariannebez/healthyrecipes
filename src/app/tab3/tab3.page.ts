@@ -21,6 +21,8 @@ export class Tab3Page implements OnInit {
     this.shoppingList = this.shoppingListService.getShoppingList();
   }
 
+  
+
   addNewItem() {
     if (this.newItem) {
       this.shoppingListService.addToShoppingList(this.newItem);

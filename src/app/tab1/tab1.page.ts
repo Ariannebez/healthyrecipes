@@ -39,5 +39,12 @@ export class Tab1Page implements OnInit, OnDestroy {
     // Your existing logic
     this.router.navigate(['/warp']);
   }
+
+  openBurgerPage() {
+    // Your existing logic
+    this.router.navigate(['/turkey-burger']);
+  }
+
+ 
 }
 
