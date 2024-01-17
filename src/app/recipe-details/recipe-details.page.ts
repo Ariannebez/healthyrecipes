@@ -8,11 +8,14 @@ import { SharedDataService } from '../shared-data.service';
 })
 export class RecipeDetailsPage implements OnInit {
   recipe: any;
-  
+
   constructor(private sharedDataService: SharedDataService) {} // or RecipeService
 
   ngOnInit() {
-    this.recipe = this.sharedDataService.getCurrentRecipe(); // Retrieve the current recipe
+    this.recipe = this.sharedDataService.getCurrentRecipe();
+    if (!this.recipe || !this.recipe.ingredients) {
+      console.error('The recipe or ingredients are undefined.');
+    }
   }
 
 }

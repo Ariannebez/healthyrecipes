@@ -7,7 +7,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<!-- recipe-details.component.html -->
+<ion-content *ngIf="recipe">
   <ion-card>
     <img [src]="recipe.image" [alt]="recipe.name" />
     <ion-card-header>
@@ -15,21 +16,19 @@
       <ion-card-subtitle>{{ recipe.calories }} CAL</ion-card-subtitle>
     </ion-card-header>
 
-    <!-- Display ingredients dynamically -->
-    <ion-list>
+    <ion-card-content>
+      <p>{{ recipe.description }}</p>
+    </ion-card-content>
+
+    <h2>INGREDIENTS NEEDED</h2>
+    <ion-list *ngIf="recipe?.ingredients">
       <ion-item *ngFor="let ingredient of recipe.ingredients">
         <ion-label>{{ ingredient }}</ion-label>
       </ion-item>
     </ion-list>
 
-    <!-- Description -->
-    <ion-card-content class="text">
-      {{ recipe.description }}
-    </ion-card-content>
-
-    <!-- Cooking Instructions -->
-    <ion-card-content class="text">
-      {{ recipe.instructions }}
+    <ion-card-content>
+      <p>{{ recipe.instructions }}</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

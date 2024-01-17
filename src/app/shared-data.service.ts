@@ -38,6 +38,7 @@ export class SharedDataService {
     return this.recipes;
   }
 
+  //my recipe
   private currentRecipe: any;
 
   setCurrentRecipe(recipe: any) {
@@ -47,6 +48,7 @@ export class SharedDataService {
   getCurrentRecipe() {
     return this.currentRecipe;
   }
+
   
 }
 
