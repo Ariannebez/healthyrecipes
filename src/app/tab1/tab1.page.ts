@@ -52,10 +52,14 @@ export class Tab1Page implements OnInit, OnDestroy {
   }
 
   openPork() {
-    // Going to potatoes page for more info
+    // Going to pork page for more info
     this.router.navigate(['/pork']);
   }
 
+  openChicken() {
+    // Going to chicken page for more info
+    this.router.navigate(['/chicken']);
+  }
   //This opens the recpies user makes 
   openRecipeDetails(recipe: any) {
     this.sharedDataService.setCurrentRecipe(recipe);
