@@ -31,26 +31,32 @@ export class Tab1Page implements OnInit, OnDestroy {
     }
   }
 
+  // Deleting recipe user adds 
   deleteRecipe(index: number) {
     this.sharedDataService.deleteRecipe(index);
   }
 
   openWarpPage() {
-    // Your existing logic
+    // Going to warp page for more info
     this.router.navigate(['/warp']);
   }
 
   openBurgerPage() {
-    // Your existing logic
+    // Going to turkey-burger page for more info
     this.router.navigate(['/turkey-burger']);
   }
 
   openPototoes() {
-    // Your existing logic
+    // Going to potatoes page for more info
     this.router.navigate(['/potatoes']);
   }
 
-  //This opens the recpies user make 
+  openPork() {
+    // Going to potatoes page for more info
+    this.router.navigate(['/pork']);
+  }
+
+  //This opens the recpies user makes 
   openRecipeDetails(recipe: any) {
     this.sharedDataService.setCurrentRecipe(recipe);
     this.router.navigate(['/recipe-details']);
