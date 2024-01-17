@@ -1,0 +1,88 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <img alt="buffalo chicken warp" src="https://storage.googleapis.com/fitia-api-bucket/media/images/recipe_images/1206680.jpg" />
+    <ion-card-header>
+      <ion-card-title>Soy-baked potatoes</ion-card-title>
+      <ion-card-subtitle>200 CAL</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-header>
+      <ion-card-title>INGREDIENTS NEEDED</ion-card-title>
+    </ion-card-header>    
+    
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>4 large baking potatoes</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>3 x 135g cans tuna chunks in brine, drained</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>2 tbsp mayonnaise</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>4 spring onions, thinly sliced</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>1 thumb-sized piece of ginger, peeled and finely grated</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>1 lemon, juiced</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>320g spinach</ion-label>
+        </ion-item>
+
+        <div class="centerBTN">
+          <ion-button color="secondary" (click)="addAllIngredientsToShoppingList()">
+            Add to List
+          </ion-button>
+        </div>
+        
+      </ion-list>
+      
+    </ion-card-content>
+  
+    <ion-card-header>
+      <ion-card-title>DES</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="text">
+      Serve jacket potatoes with a spicy mayo that’s fragrant with ginger for a fresh take on the usual cheesy beans number. They're perfect for a speedy supper
+    </ion-card-content>
+
+    <ion-card-header>
+      <ion-card-title>How to Cook</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="text">
+      STEP 1 : Prick the potatoes all over using a fork, then microwave on high for 10-15 mins, or until softened. Heat the oven to 200C/180C fan/gas 6, or turn on the air-fryer.
+    </ion-card-content>
+
+    <ion-card-content class="text">
+      STEP 2 : Tip the tuna into a bowl and mix with the mayo, yogurt, spring onions, ginger, half the lemon juice, the hot sauce and gherkins, if using.
+    </ion-card-content>
+
+    <ion-card-content class="text">
+      STEP 3 : When the potatoes are tender, score them lightly with a sharp knife, then pour over the soy sauce and toss quickly to coat. Bake in the oven for 15-20 mins or the air-fryer at 200C for 5 mins to crisp up the skins. Meanwhile, combine the dressing ingredients with the remaining lemon juice and drizzle this over the spinach. Split the potatoes in half, fill with the tuna mayo and serve with the spinach.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -45,6 +45,12 @@ export class Tab1Page implements OnInit, OnDestroy {
     this.router.navigate(['/turkey-burger']);
   }
 
+  openPototoes() {
+    // Your existing logic
+    this.router.navigate(['/potatoes']);
+  }
+
+  //This opens the recpies user make 
   openRecipeDetails(recipe: any) {
     this.sharedDataService.setCurrentRecipe(recipe);
     this.router.navigate(['/recipe-details']);

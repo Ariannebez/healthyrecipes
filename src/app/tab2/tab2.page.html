@@ -37,18 +37,18 @@
   </ion-item>
 
   <!--add ingredients-->
-  <ion-list>
-    <ion-list-header>
-      Ingredients
-    </ion-list-header>
-    <ion-item *ngFor="let ingredient of ingredients; let i = index">
-      <ion-label position="floating">Ingredient {{i + 1}}</ion-label>
-      <ion-input type="text" [(ngModel)]="ingredient.name">
-      </ion-input> 
-      <ion-button size=""  slot="end" (click)="removeIngredient(i)"><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
-    </ion-item>
-  </ion-list>
-  <ion-button  color="secondary" (click)="addIngredient()">Add Ingredient</ion-button>
+  <!-- <ion-list> -->
+  <!--  <ion-list-header> -->
+  <!--    Ingredients -->
+  <!--  </ion-list-header> -->
+  <!--  <ion-item *ngFor="let ingredient of ingredients; let i = index"> -->
+  <!--   <ion-label position="floating">Ingredient {{i + 1}}</ion-label> -->
+  <!--    <ion-input type="text" [(ngModel)]="ingredient.name"> -->
+  <!--    </ion-input> -->
+  <!--    <ion-button size=""  slot="end" (click)="removeIngredient(i)"><ion-icon name="remove-circle-outline"></ion-icon></ion-button> -->
+  <!-- </ion-item> -->
+  <!-- </ion-list> -->
+  <!-- <ion-button  color="secondary" (click)="addIngredient()">Add Ingredient</ion-button> -->
   <!--end of ingredients-->
   
   <div class="divp">
