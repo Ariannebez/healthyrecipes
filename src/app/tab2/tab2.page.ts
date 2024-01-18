@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { SharedDataService } from '../shared-data.service';
+import { Router } from '@angular/router';  // Import Router
 
 @Component({
   selector: 'app-tab2',
@@ -16,7 +17,8 @@ export class Tab2Page implements OnInit {
   ingredients: string[] = [];
   //ingredients = "ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7"
 
-  constructor(private sharedDataService: SharedDataService) {}
+  constructor(private sharedDataService: SharedDataService,
+    private router: Router) {}
  
   async takePicture() {
     try {
@@ -51,6 +53,8 @@ export class Tab2Page implements OnInit {
       if (ing.name.trim()) { // Check if the ingredient name is not just empty spaces
         this.ingredients.push(ing.name);
       }
+      // Navigate to Tab3Page
+    this.router.navigateByUrl('/tabs/tab1');
     });
   
     // Call the method to save data
