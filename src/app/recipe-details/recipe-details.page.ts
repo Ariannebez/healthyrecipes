@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedDataService } from '../shared-data.service';
+import { ShoppingListService } from '../shopping-list.service';
 
 @Component({
   selector: 'app-recipe-details',
@@ -8,8 +9,10 @@ import { SharedDataService } from '../shared-data.service';
 })
 export class RecipeDetailsPage implements OnInit {
   recipe: any;
+  ingredients: string[] = []; 
 
-  constructor(private sharedDataService: SharedDataService) {} // or RecipeService
+  constructor(private sharedDataService: SharedDataService,
+    private shoppingListService: ShoppingListService, ) {} 
 
   ngOnInit() {
     this.recipe = this.sharedDataService.getCurrentRecipe();
@@ -18,4 +21,10 @@ export class RecipeDetailsPage implements OnInit {
     }
   }
 
+  
+  addAllIngredientsToShoppingList() {
+    this.ingredients.forEach(ingredient => {
+      this.shoppingListService.addToShoppingList(ingredient);
+    });
+}
 }

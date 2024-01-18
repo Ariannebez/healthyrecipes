@@ -12,6 +12,7 @@ export class SharedDataService {
   }
 
   private saveRecipes() {
+    console.log(JSON.stringify(this.recipes));
     localStorage.setItem('recipes', JSON.stringify(this.recipes));
   }
 
@@ -20,6 +21,7 @@ export class SharedDataService {
     if (storedRecipes) {
       this.recipes = JSON.parse(storedRecipes);
     }
+    return this.recipes;
   }
 
   public addRecipeData(data: any) {

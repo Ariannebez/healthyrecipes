@@ -39,4 +39,6 @@ export class LogInPage {
 
     await alert.present();
 }
+
+
 }

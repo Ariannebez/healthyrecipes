@@ -25,6 +25,11 @@
       <ion-item *ngFor="let ingredient of recipe.ingredients">
         <ion-label>{{ ingredient }}</ion-label>
       </ion-item>
+      <div class="centerBTN">
+        <ion-button color="secondary" (click)="addAllIngredientsToShoppingList()">
+          Add to List
+        </ion-button>
+      </div>
     </ion-list>
 
     <ion-card-content>

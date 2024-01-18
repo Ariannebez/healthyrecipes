@@ -12,11 +12,12 @@ export class Tab2Page implements OnInit {
   recipeName: string = ''; // Add variables to hold form data
   description: string = '';
   calories: number = 0;
+  //ingredients: string = ''; //change to array 
+  ingredients: string[] = [];
+  //ingredients = "ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7"
 
   constructor(private sharedDataService: SharedDataService) {}
-
-  ngOnInit() {}
-
+ 
   async takePicture() {
     try {
       const image = await Camera.getPhoto({
@@ -30,34 +31,56 @@ export class Tab2Page implements OnInit {
     }
   }
 
-  onAddRecipe() {
+  ngOnInit(){ }
+  //onAddRecipe() {
     // Call the method to save data
-    this.saveRecipeData(this.recipeName, this.description, this.calories);
+    // loop through list of ingredient fields
+    // get each value, add it to ingredients array
+    //this.saveRecipeData(this.recipeName, this.description, this.calories, this.ingredients);
+  //}
+
+  //private saveRecipeData(name: string, description: string, calories: number, ingredients: string) {
+    // Call the shared service to save the data
+   // this.sharedDataService.addRecipeData({ image: this.recipeImage, name, description, calories, ingredients});
+  //}
+
+  onAddRecipe() {
+    
+    // Loop through the ingredient fields and add each name to the ingredients array
+    this.ingredient.forEach(ing => {
+      if (ing.name.trim()) { // Check if the ingredient name is not just empty spaces
+        this.ingredients.push(ing.name);
+      }
+    });
+  
+    // Call the method to save data
+    this.saveRecipeData(this.recipeName, this.description, this.calories, this.ingredients);
+  }
+  
+  private saveRecipeData(name: string, description: string, calories: number, ingredients: string[]) {
+  
+    this.sharedDataService.addRecipeData({ image: this.recipeImage, name, description, calories, ingredients });
   }
 
-  private saveRecipeData(name: string, description: string, calories: number) {
-    // Call the shared service to save the data
-    this.sharedDataService.addRecipeData({ image: this.recipeImage, name, description, calories });
-  }
 
    //Adding  ingredients
   // Initialize the ingredients array
-  ingredients: { name: string }[] = [{ name: '' }];
+  ingredient: { name: string }[] = [{ name: '' }];
 
   
 
   // Method to add a new ingredient field
   addIngredient() {
-    this.ingredients.push({ name: '' });
+    this.ingredient.push({ name: '' });
   }
 
   // Method to remove an ingredient field
   removeIngredient(index: number) {
     if (this.ingredients.length > 1) {
-      this.ingredients.splice(index, 1);
+      this.ingredient.splice(index, 1);
     } else {
       // Optionally reset the first item instead of removing it
-      this.ingredients[0].name = '';
+      this.ingredient[0].name = '';
     }
   }
 }
