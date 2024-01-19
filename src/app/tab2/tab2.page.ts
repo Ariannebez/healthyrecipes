@@ -34,21 +34,11 @@ export class Tab2Page implements OnInit {
   }
 
   ngOnInit(){ }
-  //onAddRecipe() {
-    // Call the method to save data
-    // loop through list of ingredient fields
-    // get each value, add it to ingredients array
-    //this.saveRecipeData(this.recipeName, this.description, this.calories, this.ingredients);
-  //}
-
-  //private saveRecipeData(name: string, description: string, calories: number, ingredients: string) {
-    // Call the shared service to save the data
-   // this.sharedDataService.addRecipeData({ image: this.recipeImage, name, description, calories, ingredients});
-  //}
+  
 
   onAddRecipe() {
     
-    // Loop through the ingredient fields and add each name to the ingredients array
+    // Looping through the ingredient fields and add each name to the ingredients array
     this.ingredient.forEach(ing => {
       if (ing.name.trim()) { // Check if the ingredient name is not just empty spaces
         this.ingredients.push(ing.name);
@@ -57,7 +47,7 @@ export class Tab2Page implements OnInit {
     this.router.navigateByUrl('/tabs/tab1');
     });
   
-    // Call the method to save data
+    // Calling the method to save data
     this.saveRecipeData(this.recipeName, this.description, this.calories, this.ingredients);
   }
   
@@ -80,8 +70,9 @@ export class Tab2Page implements OnInit {
 
   // Method to remove an ingredient field
   removeIngredient(index: number) {
-    if (this.ingredients.length > 1) {
-      this.ingredient.splice(index, 1);
+    // Check the length of the `ingredient` array, not `ingredients`
+    if (this.ingredient.length > 1) {
+      this.ingredient.splice(index, 1); // Remove the ingredient at the given index
     } else {
       // Optionally reset the first item instead of removing it
       this.ingredient[0].name = '';
