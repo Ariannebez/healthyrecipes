@@ -17,7 +17,7 @@ export class Tab4Page implements OnInit {
   ngOnInit() {}
 
   logout() {
-    // Your logout logic here, if any
+    
     this.router.navigateByUrl('/'); // This navigates to the login page
   }
   
