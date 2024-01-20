@@ -13,6 +13,7 @@ export class Tab2Page implements OnInit {
   recipeName: string = ''; // Add variables to hold form data
   description: string = '';
   calories: number = 0;
+  instructions : string = '';
   //ingredients: string = ''; //change to array 
   ingredients: string[] = [];
   //ingredients = "ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7"
@@ -48,12 +49,12 @@ export class Tab2Page implements OnInit {
     });
   
     // Calling the method to save data
-    this.saveRecipeData(this.recipeName, this.description, this.calories, this.ingredients);
+    this.saveRecipeData(this.recipeName, this.description, this.calories, this.instructions, this.ingredients);
   }
   
-  private saveRecipeData(name: string, description: string, calories: number, ingredients: string[]) {
+  private saveRecipeData(name: string, description: string, calories: number, instructions: string, ingredients: string[]) {
   
-    this.sharedDataService.addRecipeData({ image: this.recipeImage, name, description, calories, ingredients });
+    this.sharedDataService.addRecipeData({ image: this.recipeImage, name, description, calories, instructions, ingredients });
   }
 
 
