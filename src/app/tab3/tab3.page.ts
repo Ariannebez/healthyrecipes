@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingListService } from '../shopping-list.service'; // Adjust the path as per your project structure
 
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -9,12 +10,18 @@ import { ShoppingListService } from '../shopping-list.service'; // Adjust the pa
 export class Tab3Page implements OnInit {
   shoppingList: string[] = [];
   newItem: string = ''; // For adding new items
+  iconColor: string | undefined;
+
+  
+
+  
 
   constructor(private shoppingListService: ShoppingListService) {}
 
   ngOnInit() {
     this.loadShoppingList();
     console.log(this.shoppingList);
+   
   }
 
   loadShoppingList() {
@@ -40,4 +47,6 @@ export class Tab3Page implements OnInit {
     this.shoppingListService.clearShoppingList();
     this.shoppingList = [];
   }
+
+
 }
