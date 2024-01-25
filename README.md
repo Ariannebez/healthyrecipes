@@ -30,6 +30,6 @@ Installation
 ionic serve
 
 # First-time Setup
-Account Creation/Login: New users should sign up, while returning users can log in.
-Login: arianne, password: password 
-Navigate Through Tabs: Explore the tabs to view recipes, add your own, manage shopping lists, and access your profile.
+- Account Creation/Login: New users should sign up, while returning users can log in.
+- Login: arianne, password: password 
+- Navigate Through Tabs: Explore the tabs to view recipes, add your own, manage shopping lists, and access your profile.
