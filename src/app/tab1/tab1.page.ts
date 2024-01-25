@@ -15,10 +15,10 @@ export class Tab1Page implements OnInit, OnDestroy {
   constructor(private router: Router, private sharedDataService: SharedDataService) {}
 
   ngOnInit() {
-    // Get the initial list of recipes
+    // Getting the initial list of recipes
     this.recipes = this.sharedDataService.getRecipes();
 
-    // Subscribe to the event to get notified when new data is added
+    // Subscribing to the event to get notified when new data is added
     this.dataSubscription = this.sharedDataService.onDataAdded.subscribe(() => {
       this.recipes = this.sharedDataService.getRecipes();
     });

@@ -20,6 +20,7 @@
 <ion-row>
   <!--col 1-->
   <ion-col sizeMd="6" size="12">
+    <!--onclick recipe opens-->
     <ion-card (click)="openWarpPage()">
       <img alt="" src="https://sailorbailey.com/wp-content/uploads/2023/04/Cajun-Chicken-Wrap.jpg" />
       <ion-card-header>
@@ -102,6 +103,10 @@
 
 <div class="ion-padding">Your Recipes</div>
 <ion-row>
+  <!-- Grid column for each recipe. 
+       sizeMd="6" sets the size on medium screens, size="12" sets the size on smaller screens.
+       *ngFor is an Angular directive for iterating over the recipes array. -->
+       
   <ion-col sizeMd="6" size="12" *ngFor="let recipe of recipes; let i = index">
     <ion-card (click)="openRecipeDetails(recipe)">
       <img [src]="recipe.image" />
